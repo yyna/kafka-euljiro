@@ -8,10 +8,10 @@
   (.subscribe consumer (java.util.ArrayList. [topic])))
 
 (comment
-  @(def consumer (KafkaConsumer. (-> {:bootstrap.servers "localhost:29092"
-                                      :key.deserializer    "org.apache.kafka.common.serialization.StringDeserializer"
-                                      :value.deserializer  "org.apache.kafka.common.serialization.StringDeserializer"
-                                      :group.id "euljiro-kafka-jungin-1"}
+  @(def consumer (KafkaConsumer. (-> {:bootstrap.servers  "localhost:29092"
+                                      :key.deserializer   "org.apache.kafka.common.serialization.StringDeserializer"
+                                      :value.deserializer "org.apache.kafka.common.serialization.StringDeserializer"
+                                      :group.id           "euljiro-kafka-jungin-1"}
                                      (walk/stringify-keys))))
 
   ;; topic 이름
