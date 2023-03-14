@@ -5,3 +5,5 @@
 clojure/.calva
 clojure/.cpcache
 clojure/.nrepl-port
+.cpcache
+.nrepl-port
