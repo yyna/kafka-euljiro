@@ -1,7 +1,6 @@
 (ns kafka-euljiro.consumer
   (:require [clojure.data.json :as json]
-            [clojure.walk :as walk]
-            [medley.core :refer [update-existing]])
+            [clojure.walk :as walk])
   (:import [org.apache.kafka.clients.consumer KafkaConsumer]))
 
 (defn consume!
@@ -13,7 +12,6 @@
                                       :key.deserializer    "org.apache.kafka.common.serialization.StringDeserializer"
                                       :value.deserializer  "org.apache.kafka.common.serialization.StringDeserializer"
                                       :group.id "euljiro-kafka-jungin-1"}
-                                     (update-existing :retries int)
                                      (walk/stringify-keys))))
 
   ;; topic 이름
