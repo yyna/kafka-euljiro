@@ -22,8 +22,7 @@
                                      (walk/stringify-keys))))
 
   ;; topic 이름
-  @(def topic-name "kafka-euljiro-jungin")
-
+  @(def topic-name "euljiro-kafka-jungin")
 
   ;; Message produce하기
   (produce! producer topic-name {:hello :world})
