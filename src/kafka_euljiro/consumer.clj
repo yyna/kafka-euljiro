@@ -2,8 +2,7 @@
   (:require [clojure.data.json :as json]
             [clojure.walk :as walk]
             [medley.core :refer [update-existing]])
-  (:import [org.apache.kafka.clients.consumer KafkaConsumer]
-           (org.apache.kafka.clients.producer KafkaProducer ProducerRecord)))
+  (:import [org.apache.kafka.clients.consumer KafkaConsumer]))
 
 (defn consume!
   [consumer topic]
